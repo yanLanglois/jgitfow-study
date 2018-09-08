@@ -13,6 +13,13 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<url.repository.internal.snapshots>
+            http://localhost:8081/repository/yan-nexus-snapshot-repo/
+        </url.repository.internal.snapshots>
+        <url.repository.internal.releases>
+            http://localhost:8081/repository/yan-nexus-release-repo/
+        </url.repository.internal.releases>
+		
 	</properties>
 
 	<scm>
@@ -20,12 +27,15 @@
 		<connection>scm:git:https://github.com/yanLanglois/jgitfow-study.git</connection>
 		<developerConnection>scm:git:https://github.com/yanLanglois/jgitfow-study.git</developerConnection>
 	</scm>
-
+	
+	
+	
 	<repositories>
 		<repository>
 			<id>yan-nexus-release-repo</id>
 			<name>yan-nexus-release-repo</name>
 			<url>http://localhost:8081/repository/yan-nexus-release-repo/</url>
+			<layout></layout>
 		</repository>
 		<repository>
 			<id>yan-nexus-snapshot-repo</id>
@@ -33,7 +43,21 @@
 			<url>http://localhost:8081/repository/yan-nexus-snapshot-repo/</url>
 		</repository>
 	</repositories>
-
+	
+	<distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus release Repo</name>
+            <url>${url.repository.internal.releases}</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus snapshot Repo</name>
+            <url>${url.repository.internal.snapshots}</url>
+        </snapshotRepository>
+    </distributionManagement>
+	
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
