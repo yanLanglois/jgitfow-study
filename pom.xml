@@ -14,12 +14,25 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<scm>
 		<url>https://github.com/yanLanglois/jgitfow-study.git</url>
 		<connection>scm:git:https://github.com/yanLanglois/jgitfow-study.git</connection>
 		<developerConnection>scm:git:https://github.com/yanLanglois/jgitfow-study.git</developerConnection>
 	</scm>
+
+	<repositories>
+		<repository>
+			<id>yan-nexus-release-repo</id>
+			<name>yan-nexus-release-repo</name>
+			<url>http://localhost:8081/repository/yan-nexus-release-repo/</url>
+		</repository>
+		<repository>
+			<id>yan-nexus-snapshot-repo</id>
+			<name>yan-nexus-snapshot-repo</name>
+			<url>http://localhost:8081/repository/yan-nexus-snapshot-repo/</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
