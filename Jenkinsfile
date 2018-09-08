@@ -5,17 +5,18 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'C:/Users/LANGLOIY/Documents/applications/apache-maven-3.5.0/bin/mvn clean install -Dmaven.test.skip=true'
+                bat 'C:/Users/LANGLOIY/Documents/applications/apache-maven-3.5.0/bin/mvn clean compile -Dmaven.test.skip=true'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                bat 'C:/Users/LANGLOIY/Documents/applications/apache-maven-3.5.0/bin/mvn test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                bat 'C:/Users/LANGLOIY/Documents/applications/apache-maven-3.5.0/bin/mvn deploy -Dmaven.test.skip=true'
             }
         }
     }
