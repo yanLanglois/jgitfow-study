@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				bat 'mvn clean install -Dmaven.test.skip=true'
+				bat 'C:/Users/LANGLOIY/Documents/applications/apache-maven-3.5.0/bin/mvn clean install -Dmaven.test.skip=true'
             }
         }
         stage('Test') {
