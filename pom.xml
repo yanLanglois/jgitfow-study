@@ -13,9 +13,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!-- <url.repository.internal.snapshots> http://localhost:8081/repository/yan-nexus-snapshot-repo/ 
-			</url.repository.internal.snapshots> <url.repository.internal.releases> http://localhost:8081/repository/yan-nexus-release-repo/ 
-			</url.repository.internal.releases> -->
+		<url.repository.internal.snapshots>
+			http://localhost:8081/repository/yan-nexus-snapshot-repo/
+		</url.repository.internal.snapshots>
+		<url.repository.internal.releases>
+			http://localhost:8081/repository/yan-nexus-release-repo/
+		</url.repository.internal.releases>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<spring.boot-version>2.1.0.RELEASE</spring.boot-version>
@@ -29,15 +32,31 @@
 
 
 
-	<!-- <repositories> <repository> <id>yan-nexus-release-repo</id> <name>yan-nexus-release-repo</name> 
-		<url>http://localhost:8081/repository/yan-nexus-release-repo/</url> <layout></layout> 
-		</repository> <repository> <id>yan-nexus-snapshot-repo</id> <name>yan-nexus-snapshot-repo</name> 
-		<url>http://localhost:8081/repository/yan-nexus-snapshot-repo/</url> </repository> 
-		</repositories> <distributionManagement> <repository> <id>yan-releases</id> 
-		<name>Nexus release Repo</name> <url>${url.repository.internal.releases}</url> 
-		</repository> <snapshotRepository> <id>yan-snapshots</id> <name>Nexus snapshot 
-		Repo</name> <url>${url.repository.internal.snapshots}</url> </snapshotRepository> 
-		</distributionManagement> -->
+	<repositories>
+		<repository>
+			<id>yan-nexus-release-repo</id>
+			<name>yan-nexus-release-repo</name>
+			<url>http://localhost:8081/repository/yan-nexus-release-repo/</url>
+			<layout></layout>
+		</repository>
+		<repository>
+			<id>yan-nexus-snapshot-repo</id>
+			<name>yan-nexus-snapshot-repo</name>
+			<url>http://localhost:8081/repository/yan-nexus-snapshot-repo/</url>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>yan-releases</id>
+			<name>Nexus release Repo</name>
+			<url>${url.repository.internal.releases}</url>
+		</repository>
+		<snapshotRepository>
+			<id>yan-snapshots</id>
+			<name>Nexus snapshot Repo</name>
+			<url>${url.repository.internal.snapshots}</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencyManagement>
 		<dependencies>
