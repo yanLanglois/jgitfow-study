@@ -1,11 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>tests</groupId>
 	<artifactId>test-jgitflow</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>test-jgitflow</name>
@@ -37,7 +35,7 @@
 			<id>yan-nexus-release-repo</id>
 			<name>yan-nexus-release-repo</name>
 			<url>http://localhost:8081/repository/yan-nexus-release-repo/</url>
-			<layout></layout>
+			<layout />
 		</repository>
 		<repository>
 			<id>yan-nexus-snapshot-repo</id>
@@ -164,6 +162,14 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-javadoc-plugin</artifactId>
+		        <version>3.0.1</version>
+		        <configuration>
+					<doclint>none</doclint>
+		        </configuration>
+		      </plugin>
 			<plugin>
 				<groupId>external.atlassian.jgitflow</groupId>
 				<artifactId>jgitflow-maven-plugin</artifactId>
