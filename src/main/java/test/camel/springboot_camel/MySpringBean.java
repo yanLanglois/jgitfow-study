@@ -14,7 +14,11 @@ public class MySpringBean {
 
     @Value("${greeting}")
     private String say;
-
+    
+    /**
+     * Say it !
+     * @return say
+     */
     public String saySomething() {
         return say;
     }
