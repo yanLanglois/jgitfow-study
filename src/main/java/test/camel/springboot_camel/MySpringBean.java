@@ -16,7 +16,7 @@ public class MySpringBean {
     private String say;
     
     /**
-     * Say it!
+     * Say it! Add hotfix
      * @return say
      */
     public String saySomething() {
