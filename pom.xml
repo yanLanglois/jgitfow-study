@@ -3,7 +3,7 @@
 
 	<groupId>tests</groupId>
 	<artifactId>test-jgitflow</artifactId>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<packaging>jar</packaging>
 
 	<name>test-jgitflow</name>
@@ -180,7 +180,15 @@
 					<pushHotfixes>true</pushHotfixes>
 					<pushReleases>true</pushReleases>
 					<!-- see goals wiki page for configuration options -->
+					<versionNumberToIncrement>1</versionNumberToIncrement>
 				</configuration>
+				<!-- <executions>
+					<execution>
+						<goals>
+							<goal>feature-start</goal>
+						</goals>
+					</execution>
+				</executions> -->
 			</plugin>
 		</plugins>
 	</build>
