@@ -175,6 +175,7 @@
 			    <artifactId>jgitflow-maven-plugin</artifactId>
 			    <version>1.0.0-rc-1</version>
 				<configuration>
+					<releaseBranchVersionSuffix>RC</releaseBranchVersionSuffix>
 					<!-- see goals wiki page for configuration options -->
 				</configuration>
 			</plugin>
