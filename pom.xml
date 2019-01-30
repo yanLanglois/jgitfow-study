@@ -176,6 +176,9 @@
 			    <version>1.0.0-rc-1</version>
 				<configuration>
 					<releaseBranchVersionSuffix>RC</releaseBranchVersionSuffix>
+					<pushFeatures>true</pushFeatures>
+					<pushHotfixes>true</pushHotfixes>
+					<pushReleases>true</pushReleases>
 					<!-- see goals wiki page for configuration options -->
 				</configuration>
 			</plugin>
